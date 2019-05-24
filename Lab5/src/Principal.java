@@ -54,6 +54,21 @@ public class Principal extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         tf_JefedeCarrera = new javax.swing.JTextField();
         bt_Crear_Carrera = new javax.swing.JButton();
+        jd_Crear_Clase = new javax.swing.JDialog();
+        bt_Crear_Clase = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
+        tf_Edificio = new javax.swing.JTextField();
+        tf_Seccion = new javax.swing.JTextField();
+        tf_Nombre_Clase = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        tf_Salon = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        rb_Si = new javax.swing.JRadioButton();
+        rb_No = new javax.swing.JRadioButton();
+        bg_Aire = new javax.swing.ButtonGroup();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -68,11 +83,9 @@ public class Principal extends javax.swing.JFrame {
         jt_Clases = new javax.swing.JTree();
         jMenuBar1 = new javax.swing.JMenuBar();
         jm_Estudiantes = new javax.swing.JMenu();
-        jmi_Crear_Estudiantes = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jmi_Crear_Carrera = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
+        jm_Carrera = new javax.swing.JMenu();
+        jm_Maestros = new javax.swing.JMenu();
+        jm_Clases = new javax.swing.JMenu();
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jLabel4.setText("Creacion de Estudaintes");
@@ -338,6 +351,98 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
+        bt_Crear_Clase.setText("Crear");
+        bt_Crear_Clase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_Crear_ClaseActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setText("Edificio");
+
+        jLabel20.setText("Nombre");
+
+        jLabel21.setText("Seccion");
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel22.setText("Creacion de Clases");
+
+        jLabel23.setText("Salon");
+
+        jLabel24.setText("Con aire");
+
+        bg_Aire.add(rb_Si);
+        rb_Si.setText("Si");
+
+        bg_Aire.add(rb_No);
+        rb_No.setText("No");
+
+        javax.swing.GroupLayout jd_Crear_ClaseLayout = new javax.swing.GroupLayout(jd_Crear_Clase.getContentPane());
+        jd_Crear_Clase.getContentPane().setLayout(jd_Crear_ClaseLayout);
+        jd_Crear_ClaseLayout.setHorizontalGroup(
+            jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Crear_ClaseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel22)
+                    .addComponent(bt_Crear_Clase)
+                    .addGroup(jd_Crear_ClaseLayout.createSequentialGroup()
+                        .addComponent(jLabel24)
+                        .addGap(18, 18, 18)
+                        .addComponent(rb_Si)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rb_No))
+                    .addGroup(jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_Crear_ClaseLayout.createSequentialGroup()
+                            .addComponent(jLabel23)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_Salon))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_Crear_ClaseLayout.createSequentialGroup()
+                            .addComponent(jLabel19)
+                            .addGap(20, 20, 20)
+                            .addComponent(tf_Edificio, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_Crear_ClaseLayout.createSequentialGroup()
+                            .addComponent(jLabel20)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(tf_Nombre_Clase))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_Crear_ClaseLayout.createSequentialGroup()
+                            .addComponent(jLabel21)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_Seccion, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(166, Short.MAX_VALUE))
+        );
+        jd_Crear_ClaseLayout.setVerticalGroup(
+            jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Crear_ClaseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel22)
+                .addGap(18, 18, 18)
+                .addGroup(jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(tf_Nombre_Clase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(tf_Seccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel19)
+                    .addComponent(tf_Edificio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(tf_Salon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jd_Crear_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24)
+                    .addComponent(rb_Si)
+                    .addComponent(rb_No))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(bt_Crear_Clase)
+                .addGap(25, 25, 25))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel10.setText("Estudiantes");
@@ -362,34 +467,31 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane4.setViewportView(jt_Clases);
 
         jm_Estudiantes.setText("Estudaintes");
-
-        jmi_Crear_Estudiantes.setText("Crear");
-        jmi_Crear_Estudiantes.addActionListener(new java.awt.event.ActionListener() {
+        jm_Estudiantes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmi_Crear_EstudiantesActionPerformed(evt);
+                jm_EstudiantesActionPerformed(evt);
             }
         });
-        jm_Estudiantes.add(jmi_Crear_Estudiantes);
-
         jMenuBar1.add(jm_Estudiantes);
 
-        jMenu2.setText("Carrera");
-
-        jmi_Crear_Carrera.setText("Crear ");
-        jmi_Crear_Carrera.addActionListener(new java.awt.event.ActionListener() {
+        jm_Carrera.setText("Carrera");
+        jm_Carrera.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmi_Crear_CarreraActionPerformed(evt);
+                jm_CarreraActionPerformed(evt);
             }
         });
-        jMenu2.add(jmi_Crear_Carrera);
+        jMenuBar1.add(jm_Carrera);
 
-        jMenuBar1.add(jMenu2);
+        jm_Maestros.setText("Maestros");
+        jMenuBar1.add(jm_Maestros);
 
-        jMenu3.setText("Maestros");
-        jMenuBar1.add(jMenu3);
-
-        jMenu4.setText("Clases");
-        jMenuBar1.add(jMenu4);
+        jm_Clases.setText("Clases");
+        jm_Clases.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jm_ClasesActionPerformed(evt);
+            }
+        });
+        jMenuBar1.add(jm_Clases);
 
         setJMenuBar(jMenuBar1);
 
@@ -438,14 +540,6 @@ public class Principal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jmi_Crear_EstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_Crear_EstudiantesActionPerformed
-        // TODO add your handling code here:
-        jd_Crear_Estudiantes.setModal(true);
-        jd_Crear_Estudiantes.pack();
-        jd_Crear_Estudiantes.setLocationRelativeTo(this);
-        jd_Crear_Estudiantes.setVisible(true);
-    }//GEN-LAST:event_jmi_Crear_EstudiantesActionPerformed
 
     private void bt_Crear_EstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Crear_EstudianteActionPerformed
         // TODO add your handling code here:
@@ -633,13 +727,94 @@ public class Principal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_bt_Crear_CarreraActionPerformed
 
-    private void jmi_Crear_CarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_Crear_CarreraActionPerformed
+    private void jm_CarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_CarreraActionPerformed
         // TODO add your handling code here:
         jd_Crear_Carrera.setModal(true);
         jd_Crear_Carrera.pack();
         jd_Crear_Carrera.setLocationRelativeTo(this);
         jd_Crear_Carrera.setVisible(true);
-    }//GEN-LAST:event_jmi_Crear_CarreraActionPerformed
+    }//GEN-LAST:event_jm_CarreraActionPerformed
+
+    private void jm_EstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_EstudiantesActionPerformed
+        // TODO add your handling code here:
+        jd_Crear_Estudiantes.setModal(true);
+        jd_Crear_Estudiantes.pack();
+        jd_Crear_Estudiantes.setLocationRelativeTo(this);
+        jd_Crear_Estudiantes.setVisible(true);
+    }//GEN-LAST:event_jm_EstudiantesActionPerformed
+
+    private void bt_Crear_ClaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Crear_ClaseActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel modelo = (DefaultListModel) jl_Clases.getModel();
+        int edificio = 0;
+        int seccion = 0;
+        int letras = 0;
+        int letras1 = 0;
+        String aux1 = tf_Seccion.getText();
+        String aux2 = tf_Edificio.getText();
+        String aire = "";
+
+        for (int i = 0; i < aux1.length(); i++) {
+            if (Character.isDigit(aux1.charAt(i))) {
+
+            } else {
+                letras++;
+            }
+        }
+        for (int i = 0; i < aux2.length(); i++) {
+            if (Character.isDigit(aux2.charAt(i))) {
+
+            } else {
+                letras1++;
+            }
+        }
+        if (letras > 0) {
+            JOptionPane.showMessageDialog(jd_Crear_Clase, "No se aceptan letras en la seccion de la clase");
+            bt_Crear_Clase.setEnabled(false);
+        } else {
+            bt_Crear_Clase.setEnabled(true);
+            seccion = Integer.parseInt(tf_Seccion.getText());
+        }
+        if (letras1 > 0) {
+            JOptionPane.showMessageDialog(jd_Crear_Clase, "No se aceptan letras en el numero de edificio");
+            bt_Crear_Clase.setEnabled(false);
+        } else {
+            bt_Crear_Clase.setEnabled(true);
+            edificio = Integer.parseInt(tf_Edificio.getText());
+        }
+
+        if (rb_Si.isSelected()) {
+            aire = "Si";
+            modelo.addElement(new Clase(tf_Nombre_Clase.getText(), seccion, edificio, tf_Salon.getText(), "Si"));
+            jl_Clases.setModel(modelo);
+            tf_Edificio.setText("");
+            tf_Seccion.setText("");
+            tf_Salon.setText("");
+            rb_Si.setSelected(false);
+            rb_No.setSelected(false);
+        } else if (rb_No.isSelected()) {
+            aire = "No";
+            modelo.addElement(new Clase(tf_Nombre_Clase.getText(), seccion, edificio, tf_Salon.getText(), "No"));
+            jl_Clases.setModel(modelo);
+            tf_Edificio.setText("");
+            tf_Seccion.setText("");
+            tf_Salon.setText("");
+            rb_Si.setSelected(false);
+            rb_No.setSelected(false);
+        } else {
+            JOptionPane.showMessageDialog(jd_Crear_Clase, "Debe de seleccionar si o no para el aire");
+            bt_Crear_Estudiante.setEnabled(false);
+        }
+
+    }//GEN-LAST:event_bt_Crear_ClaseActionPerformed
+
+    private void jm_ClasesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_ClasesActionPerformed
+        // TODO add your handling code here:
+        jd_Crear_Clase.setModal(true);
+        jd_Crear_Clase.pack();
+        jd_Crear_Clase.setLocationRelativeTo(this);
+        jd_Crear_Clase.setVisible(true);
+    }//GEN-LAST:event_jm_ClasesActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -674,9 +849,11 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bg_Aire;
     private javax.swing.ButtonGroup bg_Carrera;
     private javax.swing.ButtonGroup bg_Genero;
     private javax.swing.JButton bt_Crear_Carrera;
+    private javax.swing.JButton bt_Crear_Clase;
     private javax.swing.JButton bt_Crear_Estudiante;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -688,7 +865,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -696,22 +879,21 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JDialog jd_Crear_Carrera;
+    private javax.swing.JDialog jd_Crear_Clase;
     private javax.swing.JDialog jd_Crear_Estudiantes;
     private javax.swing.JList<String> jl_Clases;
     private javax.swing.JList<String> jl_Estudiantes;
     private javax.swing.JList<String> jl_Mestros;
+    private javax.swing.JMenu jm_Carrera;
+    private javax.swing.JMenu jm_Clases;
     private javax.swing.JMenu jm_Estudiantes;
-    private javax.swing.JMenuItem jmi_Crear_Carrera;
-    private javax.swing.JMenuItem jmi_Crear_Estudiantes;
+    private javax.swing.JMenu jm_Maestros;
     private javax.swing.JTree jt_Clases;
     private javax.swing.JRadioButton rb_Adminsitracion;
     private javax.swing.JRadioButton rb_Biomedica;
@@ -725,18 +907,23 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_Mecatronica;
     private javax.swing.JRadioButton rb_MedicinayCirugia;
     private javax.swing.JRadioButton rb_Mercadotecnia;
+    private javax.swing.JRadioButton rb_No;
     private javax.swing.JRadioButton rb_NurticionyTerapiaFisica;
     private javax.swing.JRadioButton rb_Ocupacional;
     private javax.swing.JRadioButton rb_Odontologia;
+    private javax.swing.JRadioButton rb_Si;
     private javax.swing.JRadioButton rb_SistemasComputacionales;
     private javax.swing.JTextField tf_Apellido_Estudainte;
     private javax.swing.JTextField tf_Costo_Mensual;
     private javax.swing.JTextField tf_Edad;
+    private javax.swing.JTextField tf_Edificio;
     private javax.swing.JTextField tf_JefedeCarrera;
     private javax.swing.JTextField tf_Nombre_Carrera;
+    private javax.swing.JTextField tf_Nombre_Clase;
     private javax.swing.JTextField tf_Nombre_Estudainte;
     private javax.swing.JTextField tf_Numero_Cuenta_Estudiante;
+    private javax.swing.JTextField tf_Salon;
+    private javax.swing.JTextField tf_Seccion;
     // End of variables declaration//GEN-END:variables
 Carrera c;
-
 }

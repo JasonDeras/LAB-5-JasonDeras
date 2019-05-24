@@ -5,9 +5,9 @@ public class Clase {
     private int seccion;
     private int edificio;
     private String salon;
-    private boolean aire;
+    private String aire;
 
-    public Clase(String nombre, int seccion, int edificio, String salon, boolean aire) {
+    public Clase(String nombre, int seccion, int edificio, String salon, String aire) {
         this.nombre = nombre;
         this.seccion = seccion;
         this.edificio = edificio;
@@ -47,11 +47,11 @@ public class Clase {
         this.salon = salon;
     }
 
-    public boolean isAire() {
+    public String isAire() {
         return aire;
     }
 
-    public void setAire(boolean aire) {
+    public void setAire(String aire) {
         this.aire = aire;
     }
 
