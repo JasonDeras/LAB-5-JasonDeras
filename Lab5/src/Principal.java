@@ -4,11 +4,11 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 
 public class Principal extends javax.swing.JFrame {
-    
+
     public Principal() {
         initComponents();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -84,6 +84,54 @@ public class Principal extends javax.swing.JFrame {
         tf_Edad_Maestro = new javax.swing.JTextField();
         tf_Apellido_Maestro = new javax.swing.JTextField();
         tf_Clases = new javax.swing.JTextField();
+        pp_Arbol = new javax.swing.JPopupMenu();
+        jmi_Eliminar = new javax.swing.JMenuItem();
+        jmi_Modificar = new javax.swing.JMenuItem();
+        jd_Modificar_Estudiante = new javax.swing.JDialog();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        tf_Nombre_Estudainte1 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        tf_Apellido_Estudainte1 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        tf_Numero_Cuenta_Estudiante1 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        rb_Masculino1 = new javax.swing.JRadioButton();
+        rb_Femenino1 = new javax.swing.JRadioButton();
+        bt_Modificar_Estudiante = new javax.swing.JButton();
+        pp_Lista_Clases = new javax.swing.JPopupMenu();
+        jmi_Modificar_Clase = new javax.swing.JMenuItem();
+        jmi_Eliminar_Clase = new javax.swing.JMenuItem();
+        jd_Moficar_Clase = new javax.swing.JDialog();
+        jLabel37 = new javax.swing.JLabel();
+        tf_Nombre_Clase1 = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        tf_Seccion1 = new javax.swing.JTextField();
+        jLabel39 = new javax.swing.JLabel();
+        tf_Edificio1 = new javax.swing.JTextField();
+        jLabel40 = new javax.swing.JLabel();
+        tf_Salon1 = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        rb_Si1 = new javax.swing.JRadioButton();
+        rb_No1 = new javax.swing.JRadioButton();
+        bt_Crear_Clase1 = new javax.swing.JButton();
+        jLabel42 = new javax.swing.JLabel();
+        jd_Modificar_Maestros = new javax.swing.JDialog();
+        jLabel43 = new javax.swing.JLabel();
+        tf_Nombre_Maestro1 = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        tf_Apellido_Maestro1 = new javax.swing.JTextField();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        tf_Salario1 = new javax.swing.JTextField();
+        jLabel47 = new javax.swing.JLabel();
+        tf_Edad_Maestro1 = new javax.swing.JTextField();
+        jLabel48 = new javax.swing.JLabel();
+        tf_Clases1 = new javax.swing.JTextField();
+        bt_Modificar_Maestros = new javax.swing.JButton();
+        pp_Lista_Maestros = new javax.swing.JPopupMenu();
+        jmi_Modificar_Maestro = new javax.swing.JMenuItem();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -123,7 +171,6 @@ public class Principal extends javax.swing.JFrame {
         jLabel1.setText("Genero");
 
         bg_Genero.add(rb_Masculino);
-        rb_Masculino.setSelected(true);
         rb_Masculino.setText("M");
 
         bg_Genero.add(rb_Femenino);
@@ -551,6 +598,305 @@ public class Principal extends javax.swing.JFrame {
                     .addGap(89, 89, 89)))
         );
 
+        jmi_Eliminar.setText("Eliminar");
+        pp_Arbol.add(jmi_Eliminar);
+
+        jmi_Modificar.setText("Modificar");
+        jmi_Modificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_ModificarActionPerformed(evt);
+            }
+        });
+        pp_Arbol.add(jmi_Modificar);
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel31.setText("Modificacion de Estudaintes");
+
+        jLabel32.setText("Nombre");
+
+        jLabel33.setText("Apellido");
+
+        jLabel34.setText("Numero de Cuenta");
+
+        jLabel35.setText("Edad");
+
+        jLabel36.setText("Genero");
+
+        bg_Genero.add(rb_Masculino1);
+        rb_Masculino1.setSelected(true);
+        rb_Masculino1.setText("M");
+
+        bg_Genero.add(rb_Femenino1);
+        rb_Femenino1.setText("F");
+
+        bt_Modificar_Estudiante.setText("Modificar");
+        bt_Modificar_Estudiante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_Modificar_EstudianteActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_Modificar_EstudianteLayout = new javax.swing.GroupLayout(jd_Modificar_Estudiante.getContentPane());
+        jd_Modificar_Estudiante.getContentPane().setLayout(jd_Modificar_EstudianteLayout);
+        jd_Modificar_EstudianteLayout.setHorizontalGroup(
+            jd_Modificar_EstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Modificar_EstudianteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_Modificar_EstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_Modificar_EstudianteLayout.createSequentialGroup()
+                        .addComponent(jLabel34)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tf_Numero_Cuenta_Estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel31)
+                    .addGroup(jd_Modificar_EstudianteLayout.createSequentialGroup()
+                        .addComponent(jLabel33)
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_Apellido_Estudainte1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_Modificar_EstudianteLayout.createSequentialGroup()
+                        .addComponent(jLabel32)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tf_Nombre_Estudainte1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_Modificar_EstudianteLayout.createSequentialGroup()
+                        .addComponent(jLabel36)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rb_Masculino1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(rb_Femenino1))
+                    .addComponent(jLabel35)
+                    .addComponent(bt_Modificar_Estudiante))
+                .addContainerGap(55, Short.MAX_VALUE))
+        );
+        jd_Modificar_EstudianteLayout.setVerticalGroup(
+            jd_Modificar_EstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Modificar_EstudianteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel31)
+                .addGap(18, 18, 18)
+                .addGroup(jd_Modificar_EstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(tf_Nombre_Estudainte1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_Modificar_EstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel33)
+                    .addComponent(tf_Apellido_Estudainte1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_Modificar_EstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(tf_Numero_Cuenta_Estudiante1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addComponent(jLabel35)
+                .addGap(25, 25, 25)
+                .addGroup(jd_Modificar_EstudianteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(rb_Masculino1)
+                    .addComponent(rb_Femenino1))
+                .addGap(18, 18, 18)
+                .addComponent(bt_Modificar_Estudiante)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+
+        jmi_Modificar_Clase.setText("Menus");
+        jmi_Modificar_Clase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_Modificar_ClaseActionPerformed(evt);
+            }
+        });
+        pp_Lista_Clases.add(jmi_Modificar_Clase);
+
+        jmi_Eliminar_Clase.setText("Eliminar");
+        jmi_Eliminar_Clase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_Eliminar_ClaseActionPerformed(evt);
+            }
+        });
+        pp_Lista_Clases.add(jmi_Eliminar_Clase);
+
+        jLabel37.setText("Nombre");
+
+        jLabel38.setText("Seccion");
+
+        jLabel39.setText("Edificio");
+
+        jLabel40.setText("Salon");
+
+        jLabel41.setText("Con aire");
+
+        bg_Aire.add(rb_Si1);
+        rb_Si1.setText("Si");
+
+        bg_Aire.add(rb_No1);
+        rb_No1.setText("No");
+
+        bt_Crear_Clase1.setText("Modificar");
+        bt_Crear_Clase1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_Crear_Clase1ActionPerformed(evt);
+            }
+        });
+
+        jLabel42.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel42.setText("Modificar de Clases");
+
+        javax.swing.GroupLayout jd_Moficar_ClaseLayout = new javax.swing.GroupLayout(jd_Moficar_Clase.getContentPane());
+        jd_Moficar_Clase.getContentPane().setLayout(jd_Moficar_ClaseLayout);
+        jd_Moficar_ClaseLayout.setHorizontalGroup(
+            jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Moficar_ClaseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel42)
+                    .addComponent(bt_Crear_Clase1)
+                    .addGroup(jd_Moficar_ClaseLayout.createSequentialGroup()
+                        .addComponent(jLabel41)
+                        .addGap(18, 18, 18)
+                        .addComponent(rb_Si1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(rb_No1))
+                    .addGroup(jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_Moficar_ClaseLayout.createSequentialGroup()
+                            .addComponent(jLabel40)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_Salon1))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_Moficar_ClaseLayout.createSequentialGroup()
+                            .addComponent(jLabel39)
+                            .addGap(20, 20, 20)
+                            .addComponent(tf_Edificio1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_Moficar_ClaseLayout.createSequentialGroup()
+                            .addComponent(jLabel37)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(tf_Nombre_Clase1))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jd_Moficar_ClaseLayout.createSequentialGroup()
+                            .addComponent(jLabel38)
+                            .addGap(18, 18, 18)
+                            .addComponent(tf_Seccion1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(159, Short.MAX_VALUE))
+        );
+        jd_Moficar_ClaseLayout.setVerticalGroup(
+            jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Moficar_ClaseLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel42)
+                .addGap(18, 18, 18)
+                .addGroup(jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37)
+                    .addComponent(tf_Nombre_Clase1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(tf_Seccion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel39)
+                    .addComponent(tf_Edificio1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(tf_Salon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jd_Moficar_ClaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel41)
+                    .addComponent(rb_Si1)
+                    .addComponent(rb_No1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(bt_Crear_Clase1)
+                .addGap(25, 25, 25))
+        );
+
+        jLabel43.setText("Nombre");
+
+        jLabel44.setText("Apellido");
+
+        jLabel45.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel45.setText("Creacion de Maestros");
+
+        jLabel46.setText("Salario");
+
+        jLabel47.setText("Edad");
+
+        jLabel48.setText("Clase que imparte");
+
+        bt_Modificar_Maestros.setText("Modificar");
+        bt_Modificar_Maestros.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_Modificar_MaestrosActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_Modificar_MaestrosLayout = new javax.swing.GroupLayout(jd_Modificar_Maestros.getContentPane());
+        jd_Modificar_Maestros.getContentPane().setLayout(jd_Modificar_MaestrosLayout);
+        jd_Modificar_MaestrosLayout.setHorizontalGroup(
+            jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Modificar_MaestrosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_Modificar_MaestrosLayout.createSequentialGroup()
+                        .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jd_Modificar_MaestrosLayout.createSequentialGroup()
+                                .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel46)
+                                    .addComponent(jLabel47))
+                                .addGap(18, 18, 18)
+                                .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tf_Salario1)
+                                    .addComponent(tf_Edad_Maestro1)))
+                            .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel45)
+                                .addGroup(jd_Modificar_MaestrosLayout.createSequentialGroup()
+                                    .addComponent(jLabel43)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(tf_Nombre_Maestro1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jd_Modificar_MaestrosLayout.createSequentialGroup()
+                                    .addComponent(jLabel44)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(tf_Apellido_Maestro1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jd_Modificar_MaestrosLayout.createSequentialGroup()
+                                    .addComponent(jLabel48)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(tf_Clases1))))
+                        .addGap(373, 373, 373))
+                    .addGroup(jd_Modificar_MaestrosLayout.createSequentialGroup()
+                        .addComponent(bt_Modificar_Maestros)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        jd_Modificar_MaestrosLayout.setVerticalGroup(
+            jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Modificar_MaestrosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel45)
+                .addGap(23, 23, 23)
+                .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel43)
+                    .addComponent(tf_Nombre_Maestro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel44)
+                    .addComponent(tf_Apellido_Maestro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel46)
+                    .addComponent(tf_Salario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel47)
+                    .addComponent(tf_Edad_Maestro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_Modificar_MaestrosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_Clases1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel48))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                .addComponent(bt_Modificar_Maestros)
+                .addContainerGap())
+        );
+
+        jmi_Modificar_Maestro.setText("jMenuItem1");
+        jmi_Modificar_Maestro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_Modificar_MaestroActionPerformed(evt);
+            }
+        });
+        pp_Lista_Maestros.add(jmi_Modificar_Maestro);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel10.setText("Estudiantes");
@@ -570,13 +916,28 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jl_Estudiantes);
 
         jl_Clases.setModel(new DefaultListModel());
+        jl_Clases.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_ClasesMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jl_Clases);
 
         jl_Mestros.setModel(new DefaultListModel());
+        jl_Mestros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_MestrosMouseClicked(evt);
+            }
+        });
         jScrollPane3.setViewportView(jl_Mestros);
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Carreras");
         jt_Clases.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_Clases.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_ClasesMouseClicked(evt);
+            }
+        });
         jScrollPane4.setViewportView(jt_Clases);
 
         jm_Estudiantes.setText("Estudaintes");
@@ -707,7 +1068,7 @@ public class Principal extends javax.swing.JFrame {
         }//If de la carrera
         for (int i = 0; i < aux.length(); i++) {
             if (Character.isDigit(aux.charAt(i))) {
-                
+
             } else {
                 letras++;
             }//If que valida si hay letras en el numero
@@ -722,10 +1083,10 @@ public class Principal extends javax.swing.JFrame {
             cuenta = tf_Numero_Cuenta_Estudiante.getText();
         }//If auxiliar de las cuentas
         int edad = 0;
-        
+
         for (int i = 0; i < aux2.length(); i++) {
             if (Character.isDigit(aux2.charAt(i))) {
-                
+
             } else {
                 letras2++;
             }//If de las letras en la edad
@@ -763,9 +1124,8 @@ public class Principal extends javax.swing.JFrame {
         tf_Edad.setText("");
         tf_Nombre_Estudainte.setText("");
         tf_Numero_Cuenta_Estudiante.setText("");
-        
+
         jl_Estudiantes.setModel(modelo);
-        
 
     }//GEN-LAST:event_bt_Crear_EstudianteActionPerformed
 
@@ -776,15 +1136,15 @@ public class Principal extends javax.swing.JFrame {
         String aux = tf_Costo_Mensual.getText();
         int letras = 0;
         double cost = 0;
-        
+
         for (int i = 0; i < aux.length(); i++) {
             if (Character.isDigit(aux.charAt(i))) {
-                
+
             } else {
                 letras++;
             }//If de las letras en la edad
         }
-        
+
         if (letras > 0) {
             JOptionPane.showMessageDialog(jd_Crear_Carrera, "Solo se aceotan costos mensual");
             bt_Crear_Carrera.setEnabled(false);
@@ -792,7 +1152,7 @@ public class Principal extends javax.swing.JFrame {
             bt_Crear_Carrera.setEnabled(false);
             cost = Double.parseDouble(tf_Costo_Mensual.getText());
         }
-        
+
         if (tf_Nombre_Carrera.getText().equalsIgnoreCase("Finanzas")) {
             facultad = "Licenciaturas";
             nombre = tf_Nombre_Carrera.getText();
@@ -871,17 +1231,17 @@ public class Principal extends javax.swing.JFrame {
         String aux1 = tf_Seccion.getText();
         String aux2 = tf_Edificio.getText();
         String aire = "";
-        
+
         for (int i = 0; i < aux1.length(); i++) {
             if (Character.isDigit(aux1.charAt(i))) {
-                
+
             } else {
                 letras++;
             }
         }
         for (int i = 0; i < aux2.length(); i++) {
             if (Character.isDigit(aux2.charAt(i))) {
-                
+
             } else {
                 letras1++;
             }
@@ -900,7 +1260,7 @@ public class Principal extends javax.swing.JFrame {
             bt_Crear_Clase.setEnabled(true);
             edificio = Integer.parseInt(tf_Edificio.getText());
         }
-        
+
         if (rb_Si.isSelected()) {
             aire = "Si";
             modelo.addElement(new Clase(tf_Nombre_Clase.getText(), seccion, edificio, tf_Salon.getText(), "Si"));
@@ -951,17 +1311,17 @@ public class Principal extends javax.swing.JFrame {
         int letras1 = 0;
         String aux1 = tf_Salario.getText();
         String aux2 = tf_Edad_Maestro.getText();
-        
+
         for (int i = 0; i < aux1.length(); i++) {
             if (Character.isDigit(aux1.charAt(i))) {
-                
+
             } else {
                 letras++;
             }
         }
         for (int i = 0; i < aux2.length(); i++) {
             if (Character.isDigit(aux2.charAt(i))) {
-                
+
             } else {
                 letras1++;
             }
@@ -992,88 +1352,279 @@ public class Principal extends javax.swing.JFrame {
 
     private void jl_EstudiantesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_EstudiantesMouseClicked
         // TODO add your handling code here:
-        if (evt.isMetaDown()) {
-            
-            if (jl_Estudiantes.getSelectedIndex() >= 0) {
-                DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_Clases.getModel();
-                DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
-                //obtener El estudainte a guardar
-                DefaultListModel modeloLISTA = (DefaultListModel) jl_Estudiantes.getModel();
-                String facultad = "", nombre = c.getNombre();
-                double costo_mensual = c.getCosto_mensual();
-                String jefe = c.getJefe();
-                
-                String nombrea;
-                String cuenta;
-                String apellido;
-                int edad;
-                String genero;
-                String carrera;
-                
-                nombrea = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getNombre();
-                cuenta = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCuenta();
-                apellido = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getApellido();
-                edad = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getEdad();
-                genero = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getGenero();
-                carrera = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera();
-                
-                if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("finanzas")) {
-                    facultad = "Licenciaturas";
-                    
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("derecho")) {
-                    facultad = "Licenciaturas";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("administracion de empresas")) {
-                    facultad = "Licenciaturas";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("diseño grafico")) {
-                    facultad = "Licenciaturas";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("mercadotecnia")) {
-                    facultad = "Licenciaturas";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("sistemas computacionales")) {
-                    facultad = "Ingenierias";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("industrial y de sistemas")) {
-                    facultad = "Ingenierias";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("mecatronica")) {
-                    facultad = "Ingenierias";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("biomedica")) {
-                    facultad = "Ingenierias";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("energia")) {
-                    facultad = "Ingenierias";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("medicina y cirugia")) {
-                    facultad = "Ciencias y salud";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("odontologia")) {
-                    facultad = "Ciencias y salud";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("nutricion y terapia fisica")) {
-                    facultad = "Ciencias y salud";
-                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("ocupacional")) {
-                    facultad = "Ciencias y salud";
-                }
-                
-                int centinela = -1;
-                for (int i = 0; i < raiz.getChildCount(); i++) {
-                    if (raiz.getChildAt(i).toString().equals(facultad)) {
-                        DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Carrera(nombre, facultad, costo_mensual, jefe));
-                        ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
-                        centinela = 1;
-                    } //fin if
-                } //fin for  
+        try {
+            if (evt.isMetaDown()) {
 
-                if (centinela == -1) {
-                    DefaultMutableTreeNode n = new DefaultMutableTreeNode(facultad);
-                    DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Carrera(nombre, facultad, costo_mensual, jefe));
-                    DefaultMutableTreeNode s = new DefaultMutableTreeNode(new Estudiante(nombrea, cuenta, apellido, edad, genero, carrera));
-                    p.add(s);
-                    n.add(p);
-                    raiz.add(n);
-                }  // fin if          
-                modeloARBOL.reload();
-                
-            } else {
-                JOptionPane.showMessageDialog(this,
-                        "No hay un estudiante seleccionado");
+                if (jl_Estudiantes.getSelectedIndex() >= 0) {
+                    DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_Clases.getModel();
+                    DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+                    //obtener El estudainte a guardar
+                    DefaultListModel modeloLISTA = (DefaultListModel) jl_Estudiantes.getModel();
+                    String facultad = "", nombre = c.getNombre();
+                    double costo_mensual = c.getCosto_mensual();
+                    String jefe = c.getJefe();
+
+                    String nombrea;
+                    String cuenta;
+                    String apellido;
+                    int edad;
+                    String genero;
+                    String carrera;
+
+                    nombrea = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getNombre();
+                    cuenta = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCuenta();
+                    apellido = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getApellido();
+                    edad = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getEdad();
+                    genero = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getGenero();
+                    carrera = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera();
+
+                    if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("finanzas")) {
+                        facultad = "Licenciaturas";
+
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("derecho")) {
+                        facultad = "Licenciaturas";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("administracion de empresas")) {
+                        facultad = "Licenciaturas";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("diseño grafico")) {
+                        facultad = "Licenciaturas";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("mercadotecnia")) {
+                        facultad = "Licenciaturas";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("sistemas computacionales")) {
+                        facultad = "Ingenierias";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("industrial y de sistemas")) {
+                        facultad = "Ingenierias";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("mecatronica")) {
+                        facultad = "Ingenierias";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("biomedica")) {
+                        facultad = "Ingenierias";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("energia")) {
+                        facultad = "Ingenierias";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("medicina y cirugia")) {
+                        facultad = "Ciencias y salud";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("odontologia")) {
+                        facultad = "Ciencias y salud";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("nutricion y terapia fisica")) {
+                        facultad = "Ciencias y salud";
+                    } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("ocupacional")) {
+                        facultad = "Ciencias y salud";
+                    }
+
+                    int centinela = -1;
+                    for (int i = 0; i < raiz.getChildCount(); i++) {
+                        if (raiz.getChildAt(i).toString().equals(facultad)) {
+                            DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Carrera(nombre, facultad, costo_mensual, jefe));
+                            ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
+                            centinela = 1;
+                        } //fin if
+                    } //fin for  
+
+                    if (centinela == -1) {
+                        DefaultMutableTreeNode n = new DefaultMutableTreeNode(facultad);
+                        DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Carrera(nombre, facultad, costo_mensual, jefe));
+                        DefaultMutableTreeNode s = new DefaultMutableTreeNode(new Estudiante(nombrea, cuenta, apellido, edad, genero, carrera));
+                        p.add(s);
+                        n.add(p);
+                        raiz.add(n);
+                    }  // fin if          
+                    modeloARBOL.reload();
+
+                } else {
+                    JOptionPane.showMessageDialog(this,
+                            "No hay un estudiante seleccionado");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Ocurrio un error");
+        }
+
+    }//GEN-LAST:event_jl_EstudiantesMouseClicked
+
+    private void jt_ClasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_ClasesMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            int row = jt_Clases.getClosestRowForLocation(
+                    evt.getX(), evt.getY());
+            jt_Clases.setSelectionRow(row);
+            Object v1 = jt_Clases.getSelectionPath().getLastPathComponent();
+            nodo_seleccionado = (DefaultMutableTreeNode) v1;
+            if (nodo_seleccionado.getUserObject() instanceof Estudiante) {
+                persona_seleccionada = (Estudiante) nodo_seleccionado.
+                        getUserObject();
+                pp_Arbol.show(evt.getComponent(),
+                        evt.getX(), evt.getY());
             }
         }
-    }//GEN-LAST:event_jl_EstudiantesMouseClicked
-    
+    }//GEN-LAST:event_jt_ClasesMouseClicked
+
+    private void bt_Modificar_EstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Modificar_EstudianteActionPerformed
+        // TODO add your handling code here:
+        if (rb_Masculino1.isSelected()) {
+            c1 = new Estudiante(tf_Nombre_Estudainte1.getText(), tf_Numero_Cuenta_Estudiante1.getText(), tf_Apellido_Estudainte1.getText(), 0, "", "");
+        } else {
+            c1 = new Estudiante(tf_Nombre_Estudainte1.getText(), tf_Numero_Cuenta_Estudiante1.getText(), tf_Apellido_Estudainte1.getText(), 0, "", "");
+        }
+    }//GEN-LAST:event_bt_Modificar_EstudianteActionPerformed
+
+    private void jmi_ModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_ModificarActionPerformed
+        // TODO add your handling code here:
+        jd_Modificar_Estudiante.setModal(true);
+        jd_Modificar_Estudiante.pack();
+        jd_Modificar_Estudiante.setLocationRelativeTo(this);
+        jd_Modificar_Estudiante.setVisible(true);
+    }//GEN-LAST:event_jmi_ModificarActionPerformed
+
+    private void jl_ClasesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_ClasesMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            pp_Lista_Clases.show(evt.getComponent(), getX(), getY());
+        }
+    }//GEN-LAST:event_jl_ClasesMouseClicked
+
+    private void bt_Crear_Clase1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Crear_Clase1ActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel modelo = (DefaultListModel) jl_Clases.getModel();
+        int edificio = 0;
+        int seccion = 0;
+        int letras = 0;
+        int letras1 = 0;
+        String aux1 = tf_Seccion1.getText();
+        String aux2 = tf_Edificio1.getText();
+        String aire = "";
+
+        for (int i = 0; i < aux1.length(); i++) {
+            if (Character.isDigit(aux1.charAt(i))) {
+
+            } else {
+                letras++;
+            }
+        }
+        for (int i = 0; i < aux2.length(); i++) {
+            if (Character.isDigit(aux2.charAt(i))) {
+
+            } else {
+                letras1++;
+            }
+        }
+        if (letras > 0) {
+            JOptionPane.showMessageDialog(jd_Moficar_Clase, "No se aceptan letras en la seccion de la clase");
+            bt_Crear_Clase.setEnabled(false);
+        } else {
+            bt_Crear_Clase.setEnabled(true);
+            seccion = Integer.parseInt(tf_Seccion1.getText());
+        }
+        if (letras1 > 0) {
+            JOptionPane.showMessageDialog(jd_Crear_Clase, "No se aceptan letras en el numero de edificio");
+            bt_Crear_Clase.setEnabled(false);
+        } else {
+            bt_Crear_Clase.setEnabled(true);
+            edificio = Integer.parseInt(tf_Edificio1.getText());
+        }
+
+        if (rb_Si.isSelected()) {
+            aire = "Si";
+            modelo.remove(jl_Clases.getSelectedIndex());
+            modelo.addElement(new Clase(tf_Nombre_Clase1.getText(), seccion, edificio, tf_Salon1.getText(), "Si"));
+            jl_Clases.setModel(modelo);
+            tf_Edificio1.setText("");
+            tf_Seccion1.setText("");
+            tf_Salon1.setText("");
+            rb_Si.setSelected(false);
+            rb_No.setSelected(false);
+        } else if (rb_No.isSelected()) {
+            aire = "No";
+            modelo.remove(jl_Clases.getSelectedIndex());
+            modelo.addElement(new Clase(tf_Nombre_Clase1.getText(), seccion, edificio, tf_Salon1.getText(), "No"));
+            jl_Clases.setModel(modelo);
+            tf_Edificio1.setText("");
+            tf_Seccion1.setText("");
+            tf_Salon1.setText("");
+            rb_Si.setSelected(false);
+            rb_No.setSelected(false);
+        } else {
+            JOptionPane.showMessageDialog(jd_Crear_Clase, "Debe de seleccionar si o no para el aire");
+            bt_Crear_Clase1.setEnabled(false);
+        }
+    }//GEN-LAST:event_bt_Crear_Clase1ActionPerformed
+
+    private void jmi_Modificar_ClaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_Modificar_ClaseActionPerformed
+        // TODO add your handling code here:
+        jd_Moficar_Clase.setModal(true);
+        jd_Moficar_Clase.pack();
+        jd_Moficar_Clase.setLocationRelativeTo(this);
+        jd_Moficar_Clase.setVisible(true);
+    }//GEN-LAST:event_jmi_Modificar_ClaseActionPerformed
+
+    private void jmi_Eliminar_ClaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_Eliminar_ClaseActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel modelo = (DefaultListModel) jl_Clases.getModel();
+        modelo.remove(jl_Clases.getSelectedIndex());
+    }//GEN-LAST:event_jmi_Eliminar_ClaseActionPerformed
+
+    private void bt_Modificar_MaestrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Modificar_MaestrosActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel modelo = (DefaultListModel) jl_Mestros.getModel();
+        double salario = 0;
+        int edad = 0;
+        int letras = 0;
+        int letras1 = 0;
+        String aux1 = tf_Salario.getText();
+        String aux2 = tf_Edad_Maestro.getText();
+
+        for (int i = 0; i < aux1.length(); i++) {
+            if (Character.isDigit(aux1.charAt(i))) {
+
+            } else {
+                letras++;
+            }
+        }
+        for (int i = 0; i < aux2.length(); i++) {
+            if (Character.isDigit(aux2.charAt(i))) {
+
+            } else {
+                letras1++;
+            }
+        }
+        if (letras > 0) {
+            JOptionPane.showMessageDialog(jd_Crear_Maestros, "Solo se aceptan numero de salario");
+            bt_Crear_Maestro.setEnabled(false);
+        } else {
+            bt_Crear_Maestro.setEnabled(true);
+            salario = Double.parseDouble(tf_Salario1.getText());
+        }
+        if (letras1 > 0) {
+            JOptionPane.showMessageDialog(jd_Crear_Maestros, "Solo se aceptan numero de edad");
+            bt_Crear_Maestro.setEnabled(false);
+        } else {
+            bt_Crear_Maestro.setEnabled(true);
+            edad = Integer.parseInt(tf_Edad_Maestro1.getText());
+            modelo.remove(jl_Mestros.getSelectedIndex());
+            modelo.addElement(new Maestro(tf_Nombre_Maestro1.getText(), tf_Apellido_Maestro1.getText(), salario, edad));
+            m = new Maestro(tf_Nombre_Maestro1.getText(), tf_Apellido_Maestro1.getText(), salario, edad);
+            m.getClases().add(tf_Clases1.getText());
+            jl_Mestros.setModel(modelo);
+            tf_Edad_Maestro1.setText("");
+            tf_Salario1.setText("");
+            tf_Edad_Maestro1.setText("");
+            tf_Clases1.setText("");
+        }
+    }//GEN-LAST:event_bt_Modificar_MaestrosActionPerformed
+
+    private void jl_MestrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_MestrosMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            pp_Lista_Maestros.show(evt.getComponent(), getX(), getY());
+        }
+    }//GEN-LAST:event_jl_MestrosMouseClicked
+
+    private void jmi_Modificar_MaestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_Modificar_MaestroActionPerformed
+        // TODO add your handling code here:
+        jd_Modificar_Maestros.setModal(true);
+        jd_Modificar_Maestros.pack();
+        jd_Modificar_Maestros.setLocationRelativeTo(this);
+        jd_Modificar_Maestros.setVisible(true);
+    }//GEN-LAST:event_jmi_Modificar_MaestroActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1112,8 +1663,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_Genero;
     private javax.swing.JButton bt_Crear_Carrera;
     private javax.swing.JButton bt_Crear_Clase;
+    private javax.swing.JButton bt_Crear_Clase1;
     private javax.swing.JButton bt_Crear_Estudiante;
     private javax.swing.JButton bt_Crear_Maestro;
+    private javax.swing.JButton bt_Modificar_Estudiante;
+    private javax.swing.JButton bt_Modificar_Maestros;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1138,7 +1692,25 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1152,6 +1724,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog jd_Crear_Clase;
     private javax.swing.JDialog jd_Crear_Estudiantes;
     private javax.swing.JDialog jd_Crear_Maestros;
+    private javax.swing.JDialog jd_Modificar_Estudiante;
+    private javax.swing.JDialog jd_Modificar_Maestros;
+    private javax.swing.JDialog jd_Moficar_Clase;
     private javax.swing.JList<String> jl_Clases;
     private javax.swing.JList<String> jl_Estudiantes;
     private javax.swing.JList<String> jl_Mestros;
@@ -1160,42 +1735,69 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jm_Estudiantes;
     private javax.swing.JMenu jm_Maestros;
     private javax.swing.JMenuBar jmb_Opciones;
+    private javax.swing.JMenuItem jmi_Eliminar;
+    private javax.swing.JMenuItem jmi_Eliminar_Clase;
+    private javax.swing.JMenuItem jmi_Modificar;
+    private javax.swing.JMenuItem jmi_Modificar_Clase;
+    private javax.swing.JMenuItem jmi_Modificar_Maestro;
     private javax.swing.JTree jt_Clases;
+    private javax.swing.JPopupMenu pp_Arbol;
+    private javax.swing.JPopupMenu pp_Lista_Clases;
+    private javax.swing.JPopupMenu pp_Lista_Maestros;
     private javax.swing.JRadioButton rb_Adminsitracion;
     private javax.swing.JRadioButton rb_Biomedica;
     private javax.swing.JRadioButton rb_Derecho;
     private javax.swing.JRadioButton rb_DiseñoGrafico;
     private javax.swing.JRadioButton rb_Energia;
     private javax.swing.JRadioButton rb_Femenino;
+    private javax.swing.JRadioButton rb_Femenino1;
     private javax.swing.JRadioButton rb_Finanzas;
     private javax.swing.JRadioButton rb_IndustrialydeSistemas;
     private javax.swing.JRadioButton rb_Masculino;
+    private javax.swing.JRadioButton rb_Masculino1;
     private javax.swing.JRadioButton rb_Mecatronica;
     private javax.swing.JRadioButton rb_MedicinayCirugia;
     private javax.swing.JRadioButton rb_Mercadotecnia;
     private javax.swing.JRadioButton rb_No;
+    private javax.swing.JRadioButton rb_No1;
     private javax.swing.JRadioButton rb_NurticionyTerapiaFisica;
     private javax.swing.JRadioButton rb_Ocupacional;
     private javax.swing.JRadioButton rb_Odontologia;
     private javax.swing.JRadioButton rb_Si;
+    private javax.swing.JRadioButton rb_Si1;
     private javax.swing.JRadioButton rb_SistemasComputacionales;
     private javax.swing.JTextField tf_Apellido_Estudainte;
+    private javax.swing.JTextField tf_Apellido_Estudainte1;
     private javax.swing.JTextField tf_Apellido_Maestro;
+    private javax.swing.JTextField tf_Apellido_Maestro1;
     private javax.swing.JTextField tf_Clases;
+    private javax.swing.JTextField tf_Clases1;
     private javax.swing.JTextField tf_Costo_Mensual;
     private javax.swing.JTextField tf_Edad;
     private javax.swing.JTextField tf_Edad_Maestro;
+    private javax.swing.JTextField tf_Edad_Maestro1;
     private javax.swing.JTextField tf_Edificio;
+    private javax.swing.JTextField tf_Edificio1;
     private javax.swing.JTextField tf_JefedeCarrera;
     private javax.swing.JTextField tf_Nombre_Carrera;
     private javax.swing.JTextField tf_Nombre_Clase;
+    private javax.swing.JTextField tf_Nombre_Clase1;
     private javax.swing.JTextField tf_Nombre_Estudainte;
+    private javax.swing.JTextField tf_Nombre_Estudainte1;
     private javax.swing.JTextField tf_Nombre_Maestro;
+    private javax.swing.JTextField tf_Nombre_Maestro1;
     private javax.swing.JTextField tf_Numero_Cuenta_Estudiante;
+    private javax.swing.JTextField tf_Numero_Cuenta_Estudiante1;
     private javax.swing.JTextField tf_Salario;
+    private javax.swing.JTextField tf_Salario1;
     private javax.swing.JTextField tf_Salon;
+    private javax.swing.JTextField tf_Salon1;
     private javax.swing.JTextField tf_Seccion;
+    private javax.swing.JTextField tf_Seccion1;
     // End of variables declaration//GEN-END:variables
-Carrera c;
+    Carrera c;
     Maestro m;
+    Estudiante c1;
+    DefaultMutableTreeNode nodo_seleccionado;
+    Estudiante persona_seleccionada;
 }
