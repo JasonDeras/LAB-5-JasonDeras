@@ -2,12 +2,12 @@
 public class Clase {
 
     private String nombre;
-    private String seccion;
-    private String edificio;
+    private int seccion;
+    private int edificio;
     private String salon;
     private boolean aire;
 
-    public Clase(String nombre, String seccion, String edificio, String salon, boolean aire) {
+    public Clase(String nombre, int seccion, int edificio, String salon, boolean aire) {
         this.nombre = nombre;
         this.seccion = seccion;
         this.edificio = edificio;
@@ -23,19 +23,19 @@ public class Clase {
         this.nombre = nombre;
     }
 
-    public String getSeccion() {
+    public int getSeccion() {
         return seccion;
     }
 
-    public void setSeccion(String seccion) {
+    public void setSeccion(int seccion) {
         this.seccion = seccion;
     }
 
-    public String getEdificio() {
+    public int getEdificio() {
         return edificio;
     }
 
-    public void setEdificio(String edificio) {
+    public void setEdificio(int edificio) {
         this.edificio = edificio;
     }
 
