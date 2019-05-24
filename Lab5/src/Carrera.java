@@ -1,9 +1,10 @@
 
 public class Carrera {
-private String nombre;
-private String facultad;
-private double costo_mensual;
-private String jefe;
+
+    private String nombre;
+    private String facultad;
+    private double costo_mensual;
+    private String jefe;
 
     public Carrera(String nombre, String facultad, double costo_mensual, String jefe) {
         this.nombre = nombre;
@@ -46,7 +47,6 @@ private String jefe;
 
     @Override
     public String toString() {
-        return  "nombre=" + nombre + ", facultad=" + facultad + ", costo_mensual=" + costo_mensual + ", jefe=" + jefe + '}';
+        return nombre;
     }
-
 }

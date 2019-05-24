@@ -1,14 +1,13 @@
 
 import java.util.ArrayList;
 
-
 public class Maestro {
 
     private String nombre;
     private String apellido;
     private double salario;
     private int edad;
-    private ArrayList<Clase> clases = new ArrayList();
+    private ArrayList<String> clases = new ArrayList();
 
     public Maestro(String nombre, String apellido, double salario, int edad) {
         this.nombre = nombre;
@@ -49,17 +48,17 @@ public class Maestro {
         this.edad = edad;
     }
 
-    public ArrayList<Clase> getClases() {
+    public ArrayList<String> getClases() {
         return clases;
     }
 
-    public void setClases(ArrayList<Clase> clases) {
+    public void setClases(ArrayList<String> clases) {
         this.clases = clases;
     }
 
     @Override
     public String toString() {
-        return "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", clases=" + clases + '}';
+        return nombre;
     }
-    
+
 }
