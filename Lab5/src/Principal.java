@@ -2,11 +2,11 @@
 import javax.swing.*;
 
 public class Principal extends javax.swing.JFrame {
-    
+
     public Principal() {
         initComponents();
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -16,7 +16,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         tf_Nombre_Estudainte = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        bt_Agregar_Gerente = new javax.swing.JButton();
+        bt_Crear_Estudiante = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         tf_Apellido_Estudainte = new javax.swing.JTextField();
@@ -45,6 +45,15 @@ public class Principal extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         bg_Genero = new javax.swing.ButtonGroup();
         bg_Carrera = new javax.swing.ButtonGroup();
+        jd_Crear_Carrera = new javax.swing.JDialog();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        tf_Nombre_Carrera = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        tf_Costo_Mensual = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        tf_JefedeCarrera = new javax.swing.JTextField();
+        bt_Crear_Carrera = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -61,6 +70,7 @@ public class Principal extends javax.swing.JFrame {
         jm_Estudiantes = new javax.swing.JMenu();
         jmi_Crear_Estudiantes = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jmi_Crear_Carrera = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
 
@@ -71,10 +81,10 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel6.setText("Apellido");
 
-        bt_Agregar_Gerente.setText("Crear");
-        bt_Agregar_Gerente.addActionListener(new java.awt.event.ActionListener() {
+        bt_Crear_Estudiante.setText("Crear");
+        bt_Crear_Estudiante.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_Agregar_GerenteActionPerformed(evt);
+                bt_Crear_EstudianteActionPerformed(evt);
             }
         });
 
@@ -153,7 +163,7 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(tf_Numero_Cuenta_Estudiante, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel4)
-                    .addComponent(bt_Agregar_Gerente)
+                    .addComponent(bt_Crear_Estudiante)
                     .addGroup(jd_Crear_EstudiantesLayout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addGap(18, 18, 18)
@@ -263,8 +273,69 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(rb_NurticionyTerapiaFisica)
                     .addComponent(rb_Ocupacional))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                .addComponent(bt_Agregar_Gerente)
+                .addComponent(bt_Crear_Estudiante)
                 .addGap(39, 39, 39))
+        );
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel15.setText("Creacion de Carreras");
+
+        jLabel16.setText("Nombre");
+
+        jLabel17.setText("Costo Mensual");
+
+        jLabel18.setText("Jefe de Carrera");
+
+        bt_Crear_Carrera.setText("Crear");
+        bt_Crear_Carrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_Crear_CarreraActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_Crear_CarreraLayout = new javax.swing.GroupLayout(jd_Crear_Carrera.getContentPane());
+        jd_Crear_Carrera.getContentPane().setLayout(jd_Crear_CarreraLayout);
+        jd_Crear_CarreraLayout.setHorizontalGroup(
+            jd_Crear_CarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Crear_CarreraLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jd_Crear_CarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel15)
+                    .addGroup(jd_Crear_CarreraLayout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tf_Nombre_Carrera, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_Crear_CarreraLayout.createSequentialGroup()
+                        .addComponent(jLabel18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tf_JefedeCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jd_Crear_CarreraLayout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_Costo_Mensual, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(bt_Crear_Carrera))
+                .addContainerGap(137, Short.MAX_VALUE))
+        );
+        jd_Crear_CarreraLayout.setVerticalGroup(
+            jd_Crear_CarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_Crear_CarreraLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel15)
+                .addGap(18, 18, 18)
+                .addGroup(jd_Crear_CarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(tf_Nombre_Carrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jd_Crear_CarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(tf_Costo_Mensual, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(jd_Crear_CarreraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(tf_JefedeCarrera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(52, 52, 52)
+                .addComponent(bt_Crear_Carrera)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -287,40 +358,6 @@ public class Principal extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jl_Mestros);
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("Carreras");
-        javax.swing.tree.DefaultMutableTreeNode treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Licenciaturas");
-        javax.swing.tree.DefaultMutableTreeNode treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Finanzas");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Derecho");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Administracion de Empresas");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Diseño Grafico");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Mercadotecnia");
-        treeNode2.add(treeNode3);
-        treeNode1.add(treeNode2);
-        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Ingenierias");
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Sistemas Computacionales");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Industrial y de Sistemas");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Mecatronica");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Biomedica");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Energia");
-        treeNode2.add(treeNode3);
-        treeNode1.add(treeNode2);
-        treeNode2 = new javax.swing.tree.DefaultMutableTreeNode("Cisencias y Salud");
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Medicina y Cirugia");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Odontologia");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Nutricion y Terapia Fisica");
-        treeNode2.add(treeNode3);
-        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Ocupacional");
-        treeNode2.add(treeNode3);
-        treeNode1.add(treeNode2);
         jt_Clases.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
         jScrollPane4.setViewportView(jt_Clases);
 
@@ -337,6 +374,15 @@ public class Principal extends javax.swing.JFrame {
         jMenuBar1.add(jm_Estudiantes);
 
         jMenu2.setText("Carrera");
+
+        jmi_Crear_Carrera.setText("Crear ");
+        jmi_Crear_Carrera.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_Crear_CarreraActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jmi_Crear_Carrera);
+
         jMenuBar1.add(jMenu2);
 
         jMenu3.setText("Maestros");
@@ -395,14 +441,18 @@ public class Principal extends javax.swing.JFrame {
 
     private void jmi_Crear_EstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_Crear_EstudiantesActionPerformed
         // TODO add your handling code here:
+        jd_Crear_Estudiantes.setModal(true);
+        jd_Crear_Estudiantes.pack();
+        jd_Crear_Estudiantes.setLocationRelativeTo(this);
+        jd_Crear_Estudiantes.setVisible(true);
     }//GEN-LAST:event_jmi_Crear_EstudiantesActionPerformed
 
-    private void bt_Agregar_GerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Agregar_GerenteActionPerformed
+    private void bt_Crear_EstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Crear_EstudianteActionPerformed
         // TODO add your handling code here:
         DefaultListModel modelo = (DefaultListModel) jl_Estudiantes.getModel();
-        String carrera="";
-        String genero="";
-        String cuenta="";
+        String carrera = "";
+        String genero = "";
+        String cuenta = "";
         int letras = 0, letras2 = 0;
         String aux = tf_Numero_Cuenta_Estudiante.getText();
         String aux2 = tf_Edad.getText();
@@ -445,7 +495,7 @@ public class Principal extends javax.swing.JFrame {
         }//If de la carrera
         for (int i = 0; i < aux.length(); i++) {
             if (Character.isDigit(aux.charAt(i))) {
-                
+
             } else {
                 letras++;
             }//If que valida si hay letras en el numero
@@ -453,34 +503,33 @@ public class Principal extends javax.swing.JFrame {
 
         if (letras > 0) {
             JOptionPane.showMessageDialog(jd_Crear_Estudiantes, "No se aceptan letras en el numero de cuenta ingerese de nuevo la cuenta");
-            bt_Agregar_Gerente.setEnabled(false);
+            bt_Crear_Estudiante.setEnabled(false);
             letras = 0;
         } else {
-            bt_Agregar_Gerente.setEnabled(true);
+            bt_Crear_Estudiante.setEnabled(true);
             cuenta = tf_Numero_Cuenta_Estudiante.getText();
         }//If auxiliar de las cuentas
-        int edad=0;
-        
+        int edad = 0;
+
         for (int i = 0; i < aux2.length(); i++) {
             if (Character.isDigit(aux2.charAt(i))) {
-                
+
             } else {
                 letras2++;
             }//If de las letras en la edad
         }
         if (letras2 > 0) {
             JOptionPane.showMessageDialog(jd_Crear_Estudiantes, "No se aceptan letras en la edad ingerese de nuevo la edad");
-            bt_Agregar_Gerente.setEnabled(false);
+            bt_Crear_Estudiante.setEnabled(false);
             letras = 0;
         } else {
-            bt_Agregar_Gerente.setEnabled(true);
+            bt_Crear_Estudiante.setEnabled(true);
             edad = Integer.parseInt(tf_Edad.getText());
         }//Fin del if auxiliar de las lestras en la edad
 
         //Agregando a la lista
-        
-         modelo.addElement(new Estudiante(tf_Nombre_Estudainte.getText(), cuenta, tf_Apellido_Estudainte.getText(), edad, genero,carrera));
-        
+        modelo.addElement(new Estudiante(tf_Nombre_Estudainte.getText(), cuenta, tf_Apellido_Estudainte.getText(), edad, genero, carrera));
+
         //Reseteando los valores
         rb_Adminsitracion.setSelected(false);
         rb_Biomedica.setSelected(false);
@@ -502,14 +551,96 @@ public class Principal extends javax.swing.JFrame {
         tf_Edad.setText("");
         tf_Nombre_Estudainte.setText("");
         tf_Numero_Cuenta_Estudiante.setText("");
-        
-        
-        
-        jl_Estudiantes.setModel(modelo);
-        
 
-    }//GEN-LAST:event_bt_Agregar_GerenteActionPerformed
-    
+        jl_Estudiantes.setModel(modelo);
+
+
+    }//GEN-LAST:event_bt_Crear_EstudianteActionPerformed
+
+    private void bt_Crear_CarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_Crear_CarreraActionPerformed
+        // TODO add your handling code here:
+        String facultad = "";
+        String nombre = "";
+        String aux = tf_Costo_Mensual.getText();
+        int letras = 0;
+        double cost = 0;
+
+        for (int i = 0; i < aux.length(); i++) {
+            if (Character.isDigit(aux.charAt(i))) {
+
+            } else {
+                letras++;
+            }//If de las letras en la edad
+        }
+
+        if (letras > 0) {
+            JOptionPane.showMessageDialog(jd_Crear_Carrera, "Solo se aceotan costos mensual");
+            bt_Crear_Carrera.setEnabled(false);
+        } else {
+            bt_Crear_Carrera.setEnabled(false);
+            cost = Double.parseDouble(tf_Costo_Mensual.getText());
+        }
+
+        if (tf_Nombre_Carrera.getText().equalsIgnoreCase("Finanzas")) {
+            facultad = "Licenciaturas";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("Derecho")) {
+            facultad = "Licenciaturas";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("Administracion de empresas")) {
+            facultad = "Licenciaturas";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("diseño grafico")) {
+            facultad = "Licenciaturas";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("mercadotecnia")) {
+            facultad = "Licenciaturas";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("sistemas computacionales")) {
+            facultad = "Ingenierias";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("industrial y de sistemas")) {
+            facultad = "Ingenierias";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("mecatronica")) {
+            facultad = "Ingenierias";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("biomedica")) {
+            facultad = "Ingenierias";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("energia")) {
+            facultad = "Ingenierias";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("medicina y cirugia")) {
+            facultad = "Ciencias y salud";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("odontologia")) {
+            facultad = "Ciencias y salud";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("nutriion y terapia fisica")) {
+            facultad = "Ciencias y salud";
+            nombre = tf_Nombre_Carrera.getText();
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("ocupacional")) {
+            facultad = "Ciencias y salud";
+            nombre = tf_Nombre_Carrera.getText();
+        } else {
+            JOptionPane.showMessageDialog(jd_Crear_Carrera, "El nombre de la carrera no es valido");
+        }
+        c = new Carrera(nombre, facultad, cost, tf_JefedeCarrera.getText());
+        tf_Nombre_Carrera.setText("");
+        tf_JefedeCarrera.setText("");
+        tf_Costo_Mensual.setText("");
+
+    }//GEN-LAST:event_bt_Crear_CarreraActionPerformed
+
+    private void jmi_Crear_CarreraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_Crear_CarreraActionPerformed
+        // TODO add your handling code here:
+        jd_Crear_Carrera.setModal(true);
+        jd_Crear_Carrera.pack();
+        jd_Crear_Carrera.setLocationRelativeTo(this);
+        jd_Crear_Carrera.setVisible(true);
+    }//GEN-LAST:event_jmi_Crear_CarreraActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -545,13 +676,18 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bg_Carrera;
     private javax.swing.ButtonGroup bg_Genero;
-    private javax.swing.JButton bt_Agregar_Gerente;
+    private javax.swing.JButton bt_Crear_Carrera;
+    private javax.swing.JButton bt_Crear_Estudiante;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -568,11 +704,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JDialog jd_Crear_Carrera;
     private javax.swing.JDialog jd_Crear_Estudiantes;
     private javax.swing.JList<String> jl_Clases;
     private javax.swing.JList<String> jl_Estudiantes;
     private javax.swing.JList<String> jl_Mestros;
     private javax.swing.JMenu jm_Estudiantes;
+    private javax.swing.JMenuItem jmi_Crear_Carrera;
     private javax.swing.JMenuItem jmi_Crear_Estudiantes;
     private javax.swing.JTree jt_Clases;
     private javax.swing.JRadioButton rb_Adminsitracion;
@@ -592,8 +730,13 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_Odontologia;
     private javax.swing.JRadioButton rb_SistemasComputacionales;
     private javax.swing.JTextField tf_Apellido_Estudainte;
+    private javax.swing.JTextField tf_Costo_Mensual;
     private javax.swing.JTextField tf_Edad;
+    private javax.swing.JTextField tf_JefedeCarrera;
+    private javax.swing.JTextField tf_Nombre_Carrera;
     private javax.swing.JTextField tf_Nombre_Estudainte;
     private javax.swing.JTextField tf_Numero_Cuenta_Estudiante;
     // End of variables declaration//GEN-END:variables
+Carrera c;
+
 }

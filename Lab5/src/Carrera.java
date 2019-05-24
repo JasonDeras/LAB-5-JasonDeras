@@ -46,7 +46,7 @@ private String jefe;
 
     @Override
     public String toString() {
-        return "Carrera{" + "nombre=" + nombre + ", facultad=" + facultad + ", costo_mensual=" + costo_mensual + ", jefe=" + jefe + '}';
+        return  "nombre=" + nombre + ", facultad=" + facultad + ", costo_mensual=" + costo_mensual + ", jefe=" + jefe + '}';
     }
 
 }

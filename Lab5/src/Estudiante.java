@@ -17,8 +17,6 @@ public class Estudiante {
         this.carrera = carrera;
     }
 
-    
-
     public String getNombre() {
         return nombre;
     }
@@ -69,7 +67,7 @@ public class Estudiante {
 
     @Override
     public String toString() {
-        return "Estudiante{" + "nombre=" + nombre + ", cuenta=" + cuenta + ", carrera=" + carrera + '}';
+        return "nombre=" + nombre + ", cuenta=" + cuenta + ", carrera=" + carrera + '}';
     }
-    
+
 }
