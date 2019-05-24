@@ -1,12 +1,14 @@
 
 import javax.swing.*;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 
 public class Principal extends javax.swing.JFrame {
-
+    
     public Principal() {
         initComponents();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -560,6 +562,11 @@ public class Principal extends javax.swing.JFrame {
         jLabel13.setText("Maestros");
 
         jl_Estudiantes.setModel(new DefaultListModel());
+        jl_Estudiantes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_EstudiantesMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jl_Estudiantes);
 
         jl_Clases.setModel(new DefaultListModel());
@@ -700,7 +707,7 @@ public class Principal extends javax.swing.JFrame {
         }//If de la carrera
         for (int i = 0; i < aux.length(); i++) {
             if (Character.isDigit(aux.charAt(i))) {
-
+                
             } else {
                 letras++;
             }//If que valida si hay letras en el numero
@@ -715,10 +722,10 @@ public class Principal extends javax.swing.JFrame {
             cuenta = tf_Numero_Cuenta_Estudiante.getText();
         }//If auxiliar de las cuentas
         int edad = 0;
-
+        
         for (int i = 0; i < aux2.length(); i++) {
             if (Character.isDigit(aux2.charAt(i))) {
-
+                
             } else {
                 letras2++;
             }//If de las letras en la edad
@@ -756,9 +763,9 @@ public class Principal extends javax.swing.JFrame {
         tf_Edad.setText("");
         tf_Nombre_Estudainte.setText("");
         tf_Numero_Cuenta_Estudiante.setText("");
-
+        
         jl_Estudiantes.setModel(modelo);
-
+        
 
     }//GEN-LAST:event_bt_Crear_EstudianteActionPerformed
 
@@ -769,15 +776,15 @@ public class Principal extends javax.swing.JFrame {
         String aux = tf_Costo_Mensual.getText();
         int letras = 0;
         double cost = 0;
-
+        
         for (int i = 0; i < aux.length(); i++) {
             if (Character.isDigit(aux.charAt(i))) {
-
+                
             } else {
                 letras++;
             }//If de las letras en la edad
         }
-
+        
         if (letras > 0) {
             JOptionPane.showMessageDialog(jd_Crear_Carrera, "Solo se aceotan costos mensual");
             bt_Crear_Carrera.setEnabled(false);
@@ -785,7 +792,7 @@ public class Principal extends javax.swing.JFrame {
             bt_Crear_Carrera.setEnabled(false);
             cost = Double.parseDouble(tf_Costo_Mensual.getText());
         }
-
+        
         if (tf_Nombre_Carrera.getText().equalsIgnoreCase("Finanzas")) {
             facultad = "Licenciaturas";
             nombre = tf_Nombre_Carrera.getText();
@@ -822,7 +829,7 @@ public class Principal extends javax.swing.JFrame {
         } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("odontologia")) {
             facultad = "Ciencias y salud";
             nombre = tf_Nombre_Carrera.getText();
-        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("nutriion y terapia fisica")) {
+        } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("nutricion y terapia fisica")) {
             facultad = "Ciencias y salud";
             nombre = tf_Nombre_Carrera.getText();
         } else if (tf_Nombre_Carrera.getText().equalsIgnoreCase("ocupacional")) {
@@ -864,17 +871,17 @@ public class Principal extends javax.swing.JFrame {
         String aux1 = tf_Seccion.getText();
         String aux2 = tf_Edificio.getText();
         String aire = "";
-
+        
         for (int i = 0; i < aux1.length(); i++) {
             if (Character.isDigit(aux1.charAt(i))) {
-
+                
             } else {
                 letras++;
             }
         }
         for (int i = 0; i < aux2.length(); i++) {
             if (Character.isDigit(aux2.charAt(i))) {
-
+                
             } else {
                 letras1++;
             }
@@ -893,7 +900,7 @@ public class Principal extends javax.swing.JFrame {
             bt_Crear_Clase.setEnabled(true);
             edificio = Integer.parseInt(tf_Edificio.getText());
         }
-
+        
         if (rb_Si.isSelected()) {
             aire = "Si";
             modelo.addElement(new Clase(tf_Nombre_Clase.getText(), seccion, edificio, tf_Salon.getText(), "Si"));
@@ -944,17 +951,17 @@ public class Principal extends javax.swing.JFrame {
         int letras1 = 0;
         String aux1 = tf_Salario.getText();
         String aux2 = tf_Edad_Maestro.getText();
-
+        
         for (int i = 0; i < aux1.length(); i++) {
             if (Character.isDigit(aux1.charAt(i))) {
-
+                
             } else {
                 letras++;
             }
         }
         for (int i = 0; i < aux2.length(); i++) {
             if (Character.isDigit(aux2.charAt(i))) {
-
+                
             } else {
                 letras1++;
             }
@@ -983,6 +990,90 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bt_Crear_MaestroActionPerformed
 
+    private void jl_EstudiantesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_EstudiantesMouseClicked
+        // TODO add your handling code here:
+        if (evt.isMetaDown()) {
+            
+            if (jl_Estudiantes.getSelectedIndex() >= 0) {
+                DefaultTreeModel modeloARBOL = (DefaultTreeModel) jt_Clases.getModel();
+                DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modeloARBOL.getRoot();
+                //obtener El estudainte a guardar
+                DefaultListModel modeloLISTA = (DefaultListModel) jl_Estudiantes.getModel();
+                String facultad = "", nombre = c.getNombre();
+                double costo_mensual = c.getCosto_mensual();
+                String jefe = c.getJefe();
+                
+                String nombrea;
+                String cuenta;
+                String apellido;
+                int edad;
+                String genero;
+                String carrera;
+                
+                nombrea = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getNombre();
+                cuenta = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCuenta();
+                apellido = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getApellido();
+                edad = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getEdad();
+                genero = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getGenero();
+                carrera = ((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera();
+                
+                if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("finanzas")) {
+                    facultad = "Licenciaturas";
+                    
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("derecho")) {
+                    facultad = "Licenciaturas";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("administracion de empresas")) {
+                    facultad = "Licenciaturas";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("diseño grafico")) {
+                    facultad = "Licenciaturas";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("mercadotecnia")) {
+                    facultad = "Licenciaturas";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("sistemas computacionales")) {
+                    facultad = "Ingenierias";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("industrial y de sistemas")) {
+                    facultad = "Ingenierias";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("mecatronica")) {
+                    facultad = "Ingenierias";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("biomedica")) {
+                    facultad = "Ingenierias";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("energia")) {
+                    facultad = "Ingenierias";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("medicina y cirugia")) {
+                    facultad = "Ciencias y salud";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("odontologia")) {
+                    facultad = "Ciencias y salud";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("nutricion y terapia fisica")) {
+                    facultad = "Ciencias y salud";
+                } else if (((Estudiante) modeloLISTA.get(jl_Estudiantes.getSelectedIndex())).getCarrera().equalsIgnoreCase("ocupacional")) {
+                    facultad = "Ciencias y salud";
+                }
+                
+                int centinela = -1;
+                for (int i = 0; i < raiz.getChildCount(); i++) {
+                    if (raiz.getChildAt(i).toString().equals(facultad)) {
+                        DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Carrera(nombre, facultad, costo_mensual, jefe));
+                        ((DefaultMutableTreeNode) raiz.getChildAt(i)).add(p);
+                        centinela = 1;
+                    } //fin if
+                } //fin for  
+
+                if (centinela == -1) {
+                    DefaultMutableTreeNode n = new DefaultMutableTreeNode(facultad);
+                    DefaultMutableTreeNode p = new DefaultMutableTreeNode(new Carrera(nombre, facultad, costo_mensual, jefe));
+                    DefaultMutableTreeNode s = new DefaultMutableTreeNode(new Estudiante(nombrea, cuenta, apellido, edad, genero, carrera));
+                    p.add(s);
+                    n.add(p);
+                    raiz.add(n);
+                }  // fin if          
+                modeloARBOL.reload();
+                
+            } else {
+                JOptionPane.showMessageDialog(this,
+                        "No hay un estudiante seleccionado");
+            }
+        }
+    }//GEN-LAST:event_jl_EstudiantesMouseClicked
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
