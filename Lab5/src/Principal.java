@@ -132,6 +132,7 @@ public class Principal extends javax.swing.JFrame {
         bt_Modificar_Maestros = new javax.swing.JButton();
         pp_Lista_Maestros = new javax.swing.JPopupMenu();
         jmi_Modificar_Maestro = new javax.swing.JMenuItem();
+        jmi_Eliminar_Maestro = new javax.swing.JMenuItem();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -889,13 +890,21 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jmi_Modificar_Maestro.setText("jMenuItem1");
+        jmi_Modificar_Maestro.setText("Modificar Maestro");
         jmi_Modificar_Maestro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmi_Modificar_MaestroActionPerformed(evt);
             }
         });
         pp_Lista_Maestros.add(jmi_Modificar_Maestro);
+
+        jmi_Eliminar_Maestro.setText("Eliminar");
+        jmi_Eliminar_Maestro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_Eliminar_MaestroActionPerformed(evt);
+            }
+        });
+        pp_Lista_Maestros.add(jmi_Eliminar_Maestro);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1625,6 +1634,12 @@ public class Principal extends javax.swing.JFrame {
         jd_Modificar_Maestros.setVisible(true);
     }//GEN-LAST:event_jmi_Modificar_MaestroActionPerformed
 
+    private void jmi_Eliminar_MaestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_Eliminar_MaestroActionPerformed
+        // TODO add your handling code here:
+        DefaultListModel modelo = (DefaultListModel) jl_Mestros.getModel();
+        modelo.remove(jl_Mestros.getSelectedIndex());
+    }//GEN-LAST:event_jmi_Eliminar_MaestroActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1737,6 +1752,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuBar jmb_Opciones;
     private javax.swing.JMenuItem jmi_Eliminar;
     private javax.swing.JMenuItem jmi_Eliminar_Clase;
+    private javax.swing.JMenuItem jmi_Eliminar_Maestro;
     private javax.swing.JMenuItem jmi_Modificar;
     private javax.swing.JMenuItem jmi_Modificar_Clase;
     private javax.swing.JMenuItem jmi_Modificar_Maestro;
